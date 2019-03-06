@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private int counter = 99;
+    private int counter = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 textView.setText(Integer.toString(counter));
                 counter--;
-                handler.postDelayed(this,1000);
+                handler.postDelayed(this,100);
             }
         });
 
