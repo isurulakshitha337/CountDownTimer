@@ -58,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPause(){
         super.onPause();
+        running = false;
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        running = true;
     }
 
 
@@ -70,7 +77,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStop(){
         super.onStop();
-        running = false;//auto count when it is in the background
+        running = false;
+        //auto count when it is in the background
         //create boolean type variable wasarunning in defalt value is false and
     }
 }
